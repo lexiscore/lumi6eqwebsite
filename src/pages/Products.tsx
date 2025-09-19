@@ -11,12 +11,6 @@ const Products: React.FC = () => {
       category: 'Assessment Platform',
       description: 'Comprehensive EQ assessments that reveal team strengths and growth areas with precision.',
       focus: 'measuring EQ in context',
-      tags: [
-        { emoji: '🏭', text: 'Industry-Specific' },
-        { emoji: '💼', text: 'Job-Aware' },
-        { emoji: '🎯', text: 'Role-Relevant' },
-        { emoji: '🔍', text: 'Contextual Precision' }
-      ],
       features: [
         'Industry-specific scenarios',
         '12-competency EQ model',
@@ -32,12 +26,6 @@ const Products: React.FC = () => {
       category: 'Analytics & Reports',
       description: 'Transform assessment data into actionable growth paths with detailed analytics.',
       focus: 'making sense of EQ data',
-      tags: [
-        { emoji: '🌟', text: 'Strengths Uncovered' },
-        { emoji: '📈', text: 'Growth Pathways' },
-        { emoji: '🧩', text: 'Team Alignment' },
-        { emoji: '💡', text: 'Actionable Intelligence' }
-      ],
       features: [
         'Personalized reports',
         'Team dashboards',
@@ -53,12 +41,6 @@ const Products: React.FC = () => {
       category: 'Learning Platform',
       description: 'Personalized learning plans that build emotional intelligence habits over time.',
       focus: 'building EQ skills daily',
-      tags: [
-        { emoji: '🤝', text: 'Empathy in Action' },
-        { emoji: '🕊️', text: 'Resilience Habits' },
-        { emoji: '🔄', text: 'Continuous Growth' },
-        { emoji: '🌱', text: 'Human-Centered Learning' }
-      ],
       features: [
         'Micro-learning modules',
         'Adaptive curriculum',
@@ -74,12 +56,6 @@ const Products: React.FC = () => {
       category: 'Workplace Integration',
       description: 'Real-time EQ nudges and guidance integrated into your daily workflow.',
       focus: 'applying EQ in the moment',
-      tags: [
-        { emoji: '👥', text: 'Teamwork Amplified' },
-        { emoji: '⚡', text: 'In-the-Moment Nudges' },
-        { emoji: '🗣️', text: 'Better Conversations' },
-        { emoji: '🚀', text: 'Daily Performance Boost' }
-      ],
       features: [
         'Context-aware nudges',
         'Meeting preparation',
@@ -87,7 +63,7 @@ const Products: React.FC = () => {
         'Team dynamics'
       ],
       icon: Zap,
-      color: 'green'
+      color: 'rebuttl-orange'
     }
   ];
 
@@ -101,10 +77,57 @@ const Products: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-6">
               Our Products
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Complete emotional intelligence platform designed for modern teams. 
               Measure, learn, and grow together.
             </p>
+            
+            {/* Product Tags */}
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              {/* Discover Tags */}
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🏭</span>Industry-Specific
+              </div>
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">💼</span>Role-Relevant
+              </div>
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🔍</span>Contextual Precision
+              </div>
+              
+              {/* Insights Tags */}
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🌟</span>Strengths Uncovered
+              </div>
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">📈</span>Growth Pathways
+              </div>
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">💡</span>Actionable Intelligence
+              </div>
+              
+              {/* Grow Tags */}
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🤝</span>EI in Action
+              </div>
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🕊️</span>Resilience Habits
+              </div>
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🔄</span>Continuous Growth
+              </div>
+              
+              {/* Flow Tags */}
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">👥</span>Teamwork Amplified
+              </div>
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">⚡</span>In-the-Moment Nudges
+              </div>
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+                <span className="mr-2">🗣️</span>Better Conversations
+              </div>
+            </div>
           </div>
 
           {/* Products Grid */}
@@ -125,20 +148,6 @@ const Products: React.FC = () => {
                           Focus: {product.focus}
                         </div>
                         <p className="text-gray-600 mb-6">{product.description}</p>
-                        
-                        {/* Animated Tags */}
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {product.tags.map((tag, index) => (
-                            <div
-                              key={index}
-                              className={`bg-${product.color}/10 text-${product.color} px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0`}
-                              style={{ transitionDelay: `${index * 100}ms` }}
-                            >
-                              <span className="mr-1">{tag.emoji}</span>
-                              {tag.text}
-                            </div>
-                          ))}
-                        </div>
                         
                         <div className="space-y-2">
                           <h4 className="font-medium text-gray-900">Key Features:</h4>
