@@ -85,46 +85,46 @@ const Products: React.FC = () => {
             {/* Product Tags */}
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
               {/* Discover Tags */}
-              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-1">
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🏭</span>Industry-Specific
               </div>
-              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-2">
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">💼</span>Role-Relevant
               </div>
-              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-3">
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🔍</span>Contextual Precision
               </div>
               
               {/* Insights Tags */}
-              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-1">
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🌟</span>Strengths Uncovered
               </div>
-              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-2">
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">📈</span>Growth Pathways
               </div>
-              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-3">
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">💡</span>Actionable Intelligence
               </div>
               
               {/* Grow Tags */}
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-1">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🤝</span>EI in Action
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-2">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🕊️</span>Resilience Habits
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-3">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🔄</span>Continuous Growth
               </div>
               
               {/* Flow Tags */}
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-1">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">👥</span>Teamwork Amplified
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-2">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '1.1s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">⚡</span>In-the-Moment Nudges
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium animate-slide-up-delay-3">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🗣️</span>Better Conversations
               </div>
             </div>
