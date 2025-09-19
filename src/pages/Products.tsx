@@ -85,46 +85,46 @@ const Products: React.FC = () => {
             {/* Product Tags */}
             <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
               {/* Discover Tags */}
-              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-1">
                 <span className="mr-2">🏭</span>Industry-Specific
               </div>
-              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-2">
                 <span className="mr-2">💼</span>Role-Relevant
               </div>
-              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-3">
                 <span className="mr-2">🔍</span>Contextual Precision
               </div>
               
               {/* Insights Tags */}
-              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-4">
                 <span className="mr-2">🌟</span>Strengths Uncovered
               </div>
-              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-5">
                 <span className="mr-2">📈</span>Growth Pathways
               </div>
-              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-blue/10 text-rebuttl-blue px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-6">
                 <span className="mr-2">💡</span>Actionable Intelligence
               </div>
               
               {/* Grow Tags */}
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-7">
                 <span className="mr-2">🤝</span>EI in Action
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-8">
                 <span className="mr-2">🕊️</span>Resilience Habits
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-9">
                 <span className="mr-2">🔄</span>Continuous Growth
               </div>
               
               {/* Flow Tags */}
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-10">
                 <span className="mr-2">👥</span>Teamwork Amplified
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-11">
                 <span className="mr-2">⚡</span>In-the-Moment Nudges
               </div>
-              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 animate-slide-up-delay-12">
                 <span className="mr-2">🗣️</span>Better Conversations
               </div>
             </div>
