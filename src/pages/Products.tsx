@@ -10,6 +10,13 @@ const Products: React.FC = () => {
       name: 'Lumi6 Discover',
       category: 'Assessment Platform',
       description: 'Comprehensive EQ assessments that reveal team strengths and growth areas with precision.',
+      focus: 'measuring EQ in context',
+      tags: [
+        { emoji: '🏭', text: 'Industry-Specific' },
+        { emoji: '💼', text: 'Job-Aware' },
+        { emoji: '🎯', text: 'Role-Relevant' },
+        { emoji: '🔍', text: 'Contextual Precision' }
+      ],
       features: [
         'Industry-specific scenarios',
         '12-competency EQ model',
@@ -24,6 +31,13 @@ const Products: React.FC = () => {
       name: 'Lumi6 Insights',
       category: 'Analytics & Reports',
       description: 'Transform assessment data into actionable growth paths with detailed analytics.',
+      focus: 'making sense of EQ data',
+      tags: [
+        { emoji: '🌟', text: 'Strengths Uncovered' },
+        { emoji: '📈', text: 'Growth Pathways' },
+        { emoji: '🧩', text: 'Team Alignment' },
+        { emoji: '💡', text: 'Actionable Intelligence' }
+      ],
       features: [
         'Personalized reports',
         'Team dashboards',
@@ -38,6 +52,13 @@ const Products: React.FC = () => {
       name: 'Lumi6 Grow',
       category: 'Learning Platform',
       description: 'Personalized learning plans that build emotional intelligence habits over time.',
+      focus: 'building EQ skills daily',
+      tags: [
+        { emoji: '🤝', text: 'Empathy in Action' },
+        { emoji: '🕊️', text: 'Resilience Habits' },
+        { emoji: '🔄', text: 'Continuous Growth' },
+        { emoji: '🌱', text: 'Human-Centered Learning' }
+      ],
       features: [
         'Micro-learning modules',
         'Adaptive curriculum',
@@ -52,6 +73,13 @@ const Products: React.FC = () => {
       name: 'Lumi6 Flow',
       category: 'Workplace Integration',
       description: 'Real-time EQ nudges and guidance integrated into your daily workflow.',
+      focus: 'applying EQ in the moment',
+      tags: [
+        { emoji: '👥', text: 'Teamwork Amplified' },
+        { emoji: '⚡', text: 'In-the-Moment Nudges' },
+        { emoji: '🗣️', text: 'Better Conversations' },
+        { emoji: '🚀', text: 'Daily Performance Boost' }
+      ],
       features: [
         'Context-aware nudges',
         'Meeting preparation',
@@ -84,7 +112,7 @@ const Products: React.FC = () => {
             {products.map((product) => {
               const IconComponent = product.icon;
               return (
-                <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border-gray-200">
+                <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border-gray-200 relative overflow-hidden">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-6">
                       <div className={`bg-${product.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-${product.color}/20 transition-all duration-300 flex-shrink-0`}>
@@ -92,8 +120,25 @@ const Products: React.FC = () => {
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-medium text-gray-500 mb-2">{product.category}</div>
-                        <h3 className="text-2xl font-semibold mb-4">{product.name}</h3>
+                        <h3 className="text-2xl font-semibold mb-2">{product.name}</h3>
+                        <div className="text-sm font-medium text-gray-700 mb-4 italic">
+                          Focus: {product.focus}
+                        </div>
                         <p className="text-gray-600 mb-6">{product.description}</p>
+                        
+                        {/* Animated Tags */}
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {product.tags.map((tag, index) => (
+                            <div
+                              key={index}
+                              className={`bg-${product.color}/10 text-${product.color} px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0`}
+                              style={{ transitionDelay: `${index * 100}ms` }}
+                            >
+                              <span className="mr-1">{tag.emoji}</span>
+                              {tag.text}
+                            </div>
+                          ))}
+                        </div>
                         
                         <div className="space-y-2">
                           <h4 className="font-medium text-gray-900">Key Features:</h4>
@@ -109,6 +154,9 @@ const Products: React.FC = () => {
                       </div>
                     </div>
                   </CardContent>
+                  
+                  {/* Animated background effect */}
+                  <div className={`absolute inset-0 bg-gradient-to-r from-${product.color}/5 via-transparent to-${product.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                 </Card>
               );
             })}
