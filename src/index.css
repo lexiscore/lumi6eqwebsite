@@ -1,0 +1,182 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    @apply overflow-x-hidden;
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-rebuttl-lightBg text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+  
+  /* SF Pro Font */
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Improve mobile tap targets */
+  button, a, input, textarea, select {
+    @apply touch-manipulation;
+  }
+  
+  /* Custom Scrollbar */
+  @media (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    ::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+  }
+}
+
+/* Custom Classes */
+@layer components {
+  .feature-card {
+    @apply relative overflow-hidden rounded-2xl p-4 md:p-6 transition-all duration-300 hover:shadow-lg flex flex-col;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .rebuttl-btn {
+    @apply font-medium transition-all duration-300 flex items-center justify-center;
+  }
+  
+  .rebuttl-btn-primary {
+    @apply bg-rebuttl-blue text-white hover:bg-rebuttl-navy;
+  }
+  
+  .phone-mockup {
+    @apply rounded-[20px] md:rounded-[40px] border-4 md:border-8 border-gray-800 relative overflow-hidden shadow-xl md:shadow-2xl;
+  }
+
+  /* Mobile optimized classes */
+  .mobile-container {
+    @apply px-4 md:px-6 w-full max-w-full overflow-x-hidden;
+  }
+  
+  .mobile-padding {
+    @apply py-2 px-3 md:py-4 md:px-6;
+  }
+  
+  .mobile-text {
+    @apply text-sm md:text-base;
+  }
+  
+  .mobile-heading {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+  
+  .mobile-touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
