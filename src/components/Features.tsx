@@ -23,12 +23,16 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-rebuttl-purple/30 hover:border-rebuttl-purple transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="bg-rebuttl-purple/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rebuttl-purple/20 transition-all duration-300">
-                    <Users className="w-8 h-8 text-rebuttl-purple" />
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-rebuttl-purple/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-rebuttl-purple/20 transition-all duration-300 flex-shrink-0">
+                      <Users className="w-8 h-8 text-rebuttl-purple" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2">Discover</h3>
+                      <div className="text-sm font-medium text-rebuttl-purple mb-2">Assessment</div>
+                      <p className="text-gray-600 text-sm">Assessments that reveal strengths and gaps with precision.</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Discover</h3>
-                  <div className="text-sm font-medium text-rebuttl-purple mb-2">Assessment</div>
-                  <p className="text-gray-600 text-sm">Assessments that reveal strengths and gaps with precision.</p>
                 </div>
                 
                 <div className="mt-auto bg-rebuttl-purple/5 p-6 rounded-b-2xl group-hover:bg-rebuttl-purple/10 transition-all duration-300">
@@ -71,12 +75,16 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-rebuttl-blue/30 hover:border-rebuttl-blue transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="bg-rebuttl-blue/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rebuttl-blue/20 transition-all duration-300">
-                    <Play className="w-8 h-8 text-rebuttl-blue" />
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-rebuttl-blue/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-rebuttl-blue/20 transition-all duration-300 flex-shrink-0">
+                      <Play className="w-8 h-8 text-rebuttl-blue" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2">Insights</h3>
+                      <div className="text-sm font-medium text-rebuttl-blue mb-2">Reports & Deep Analysis</div>
+                      <p className="text-gray-600 text-sm">Reports that turn data into clear growth paths.</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Insights</h3>
-                  <div className="text-sm font-medium text-rebuttl-blue mb-2">Reports & Deep Analysis</div>
-                  <p className="text-gray-600 text-sm">Reports that turn data into clear growth paths.</p>
                 </div>
                 
                 <div className="mt-auto bg-rebuttl-blue/5 p-6 rounded-b-2xl group-hover:bg-rebuttl-blue/10 transition-all duration-300">
@@ -119,12 +127,16 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-rebuttl-orange/30 hover:border-rebuttl-orange transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="bg-rebuttl-orange/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rebuttl-orange/20 transition-all duration-300">
-                    <MessageSquare className="w-8 h-8 text-rebuttl-orange" />
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-rebuttl-orange/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-rebuttl-orange/20 transition-all duration-300 flex-shrink-0">
+                      <MessageSquare className="w-8 h-8 text-rebuttl-orange" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2">Grow</h3>
+                      <div className="text-sm font-medium text-rebuttl-orange mb-2">Learning Plan</div>
+                      <p className="text-gray-600 text-sm">Personalized learning plans that build habits over time.</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Grow</h3>
-                  <div className="text-sm font-medium text-rebuttl-orange mb-2">Learning Plan</div>
-                  <p className="text-gray-600 text-sm">Personalized learning plans that build habits over time.</p>
                 </div>
                 
                 <div className="mt-auto bg-rebuttl-orange/5 p-6 rounded-b-2xl group-hover:bg-rebuttl-orange/10 transition-all duration-300">
@@ -167,12 +179,16 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-green-300 hover:border-green-400 transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-200 transition-all duration-300">
-                    <MessageSquare className="w-8 h-8 text-green-600" />
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-green-200 transition-all duration-300 flex-shrink-0">
+                      <MessageSquare className="w-8 h-8 text-green-600" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2">Flow</h3>
+                      <div className="text-sm font-medium text-green-600 mb-2">Workplace Nudges</div>
+                      <p className="text-gray-600 text-sm">Real-time nudges that reinforce EQ where work happens.</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Flow</h3>
-                  <div className="text-sm font-medium text-green-600 mb-2">Workplace Nudges</div>
-                  <p className="text-gray-600 text-sm">Real-time nudges that reinforce EQ where work happens.</p>
                 </div>
                 
                 <div className="mt-auto bg-green-50 p-6 rounded-b-2xl group-hover:bg-green-100 transition-all duration-300">

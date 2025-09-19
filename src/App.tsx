@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useEffect } from "react";
 import Index from "./pages/Index";
+import Products from "./pages/Products";
+import Blogs from "./pages/Blogs";
 import NotFound from "./pages/NotFound";
 
 // Marketing-only app: remove data fetching/auth providers
@@ -32,6 +34,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
