@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
+import Navbar from '@/components/Navbar';
 
 const Blogs: React.FC = () => {
   const blogPosts = [
@@ -76,6 +77,7 @@ const Blogs: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Navbar />
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container mx-auto px-4">
