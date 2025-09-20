@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
 const Blogs: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  
+  const categories = ['All', 'Leadership', 'Team Building', 'Learning', 'Technology', 'Analytics', 'Remote Work'];
+  
+  // Static blog posts data
   const blogPosts = [
     {
-      id: 1,
+      id: 'future-of-work-eq',
       title: 'The Future of Work: Why Emotional Intelligence is the #1 Skill',
       excerpt: 'Explore how EQ is becoming the most critical skill in the AI-driven workplace and what it means for your team.',
       author: 'Sarah Chen',
       date: '2024-01-15',
-      readTime: '5 min read',
+      readTime: '8 min read',
       category: 'Leadership',
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       featured: true
     },
     {
-      id: 2,
+      id: 'building-high-performing-teams',
       title: 'Building High-Performing Teams Through EQ Assessment',
       excerpt: 'Learn how to identify and develop emotional intelligence gaps in your team for better collaboration.',
       author: 'Marcus Johnson',
@@ -28,7 +33,7 @@ const Blogs: React.FC = () => {
       featured: false
     },
     {
-      id: 3,
+      id: 'micro-learning-eq',
       title: 'Micro-Learning: The Secret to Sustainable EQ Development',
       excerpt: 'Discover why bite-sized learning is more effective than traditional training for emotional intelligence.',
       author: 'Dr. Emily Rodriguez',
@@ -39,7 +44,7 @@ const Blogs: React.FC = () => {
       featured: false
     },
     {
-      id: 4,
+      id: 'real-time-eq-nudges',
       title: 'Real-Time EQ Nudges: Changing Behavior Where It Matters',
       excerpt: 'How contextual guidance can help teams apply emotional intelligence in their daily interactions.',
       author: 'Alex Thompson',
@@ -50,7 +55,7 @@ const Blogs: React.FC = () => {
       featured: false
     },
     {
-      id: 5,
+      id: 'measuring-roi-eq',
       title: 'Measuring ROI: The Business Case for Emotional Intelligence',
       excerpt: 'Quantify the impact of EQ development on team performance, retention, and business outcomes.',
       author: 'Jennifer Lee',
@@ -61,7 +66,7 @@ const Blogs: React.FC = () => {
       featured: false
     },
     {
-      id: 6,
+      id: 'remote-work-eq-connection',
       title: 'Remote Work and EQ: Maintaining Connection Across Distance',
       excerpt: 'Strategies for building emotional intelligence in distributed teams and virtual environments.',
       author: 'David Park',
@@ -72,8 +77,12 @@ const Blogs: React.FC = () => {
       featured: false
     }
   ];
-
-  const categories = ['All', 'Leadership', 'Team Building', 'Learning', 'Technology', 'Analytics', 'Remote Work'];
+  
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+  
+  const featuredPosts = blogPosts.filter(post => post.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -95,8 +104,9 @@ const Blogs: React.FC = () => {
             {categories.map((category) => (
               <button
                 key={category}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category === 'All' 
+                  category === selectedCategory
                     ? 'bg-rebuttl-blue text-white' 
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                 }`}
@@ -108,7 +118,7 @@ const Blogs: React.FC = () => {
 
           {/* Featured Post */}
           <div className="mb-16">
-            {blogPosts.filter(post => post.featured).map((post) => (
+            {featuredPosts.map((post) => (
               <Card key={post.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="md:flex">
                   <div className="md:w-1/2">
@@ -143,7 +153,10 @@ const Blogs: React.FC = () => {
                         {post.readTime}
                       </div>
                     </div>
-                    <button className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all">
+                    <button 
+                      className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all"
+                      onClick={() => alert('Blog post coming soon!')}
+                    >
                       Read More
                       <ArrowRight className="w-4 h-4" />
                     </button>
@@ -155,7 +168,7 @@ const Blogs: React.FC = () => {
 
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.filter(post => !post.featured).map((post) => (
+            {filteredPosts.filter(post => !post.featured).map((post) => (
               <Card key={post.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="relative">
                   <img
@@ -184,7 +197,10 @@ const Blogs: React.FC = () => {
                       {post.readTime}
                     </div>
                   </div>
-                  <button className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all">
+                  <button 
+                    className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all"
+                    onClick={() => alert('Blog post coming soon!')}
+                  >
                     Read More
                     <ArrowRight className="w-4 h-4" />
                   </button>

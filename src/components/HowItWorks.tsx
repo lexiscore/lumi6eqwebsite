@@ -85,37 +85,25 @@ const HowItWorks: React.FC = () => {
         {/* Why EQ Matters two-column section */}
         <section id="why-eq" className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-4">Why Emotional Intelligence is the #1 future skill</h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> 90% of top performers score high in EQ</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> EQ drives collaboration, adaptability & resilience</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> AI automates tasks — EQ is the human advantage</li>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">Why Emotional Intelligence is the #1 Future Skill</h3>
+            <ul className="space-y-4 text-gray-700">
+              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> 90% of top performers excel in EQ — it's the hidden driver behind leadership and team success.</li>
+              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> EQ fuels collaboration, adaptability & resilience — the skills every workplace needs to thrive in uncertainty.</li>
+              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> AI can automate tasks — but it can't replace empathy, trust, or human connection.</li>
+              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> High-EQ teams innovate faster — psychological safety unlocks bold ideas and better decisions.</li>
+              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> EQ powers retention & engagement — employees stay where they feel valued, understood, and inspired.</li>
+              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> Future-ready leaders lead with EQ — influence, empathy, and resilience now matter more than strategy alone.</li>
             </ul>
           </div>
-          <div className="relative p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
-            {/* simple radial chart mock */}
-            <div className="mx-auto w-72 h-72 relative">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <circle cx="100" cy="100" r="90" fill="#F8FAFF" />
-                <g>
-                  <path d="M100,100 L100,20 A80,80 0 0,1 168,132 Z" fill="#4263EB33" />
-                  <path d="M100,100 L168,132 A80,80 0 0,1 60,176 Z" fill="#6366F133" />
-                  <path d="M100,100 L60,176 A80,80 0 0,1 32,84 Z" fill="#F9731633" />
-                  <path d="M100,100 L32,84 A80,80 0 0,1 100,20 Z" fill="#22C55E33" />
-                </g>
-              </svg>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-sm text-gray-500">Domains</div>
-                  <div className="text-lg font-semibold">EI Competencies</div>
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4 mt-4 text-sm text-gray-600">
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#4263EB] opacity-60"></span>Self-Awareness</div>
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#6366F1] opacity-60"></span>Self-Management</div>
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#F97316] opacity-60"></span>Social Awareness</div>
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#22C55E] opacity-60"></span>Relationship Management</div>
+          <div className="relative p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
+            {/* EQ Domains Infographic */}
+            <div className="mx-auto w-full max-w-lg">
+              <img 
+                src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/EI+domains.png" 
+                alt="Emotional Intelligence Domains - Self-Awareness, Self-Management, Social Awareness, and Relationship Management"
+                className="w-full h-auto rounded-xl shadow-md"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>

@@ -14,21 +14,15 @@ const SectionContinuous: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Radar chart mock */}
-          <div className="relative p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
-            <div className="mx-auto w-full max-w-md aspect-square">
-              <svg viewBox="0 0 200 200" className="w-full h-full">
-                <polygon points="100,20 176,60 176,140 100,180 24,140 24,60" fill="#EEF2FF" />
-                <polygon points="100,40 160,72 160,128 100,160 40,128 40,72" fill="#E0E7FF" />
-                <polygon points="100,60 144,84 144,116 100,140 56,116 56,84" fill="#C7D2FE" />
-                <polygon points="100,70 138,90 138,110 100,130 62,110 62,90" fill="#6366F166" />
-              </svg>
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-gray-600">
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#6366F1] opacity-60"></span>Self-Awareness</div>
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#22C55E] opacity-60"></span>Self-Management</div>
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#F97316] opacity-60"></span>Social Awareness</div>
-              <div><span className="inline-block w-3 h-3 mr-2 bg-[#0EA5E9] opacity-60"></span>Relationship Management</div>
+          {/* Assess to Action Infographic */}
+          <div className="relative p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
+            <div className="mx-auto w-full max-w-lg">
+              <img 
+                src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/Assess+to+action.png" 
+                alt="From Assessments to Action - EQ Development Process"
+                className="w-full h-auto rounded-xl shadow-md"
+                loading="lazy"
+              />
             </div>
           </div>
 

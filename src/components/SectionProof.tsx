@@ -38,12 +38,6 @@ const SectionProof: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 opacity-70">
-          <div className="h-10 bg-gray-100 rounded" />
-          <div className="h-10 bg-gray-100 rounded" />
-          <div className="h-10 bg-gray-100 rounded" />
-          <div className="h-10 bg-gray-100 rounded" />
-        </div>
       </div>
     </section>
   );

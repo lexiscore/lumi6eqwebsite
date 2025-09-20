@@ -23,11 +23,11 @@ const CTA: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <Button className="bg-white text-rebuttl-navy hover:bg-gray-100 h-12 px-8 text-lg group relative overflow-hidden">
-            <span className="relative z-10">Get Early Access</span>
+            <span className="relative z-10">Talk to sales</span>
             <span className="absolute inset-0 w-0 bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple opacity-10 group-hover:w-full transition-all duration-300"></span>
           </Button>
-          <Button variant="outline" className="border-white text-white hover:bg-white/10 h-12 px-8 text-lg">
-            Learn More
+          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-rebuttl-navy h-12 px-8 text-lg transition-colors">
+            <span>Learn More</span>
           </Button>
         </div>
         

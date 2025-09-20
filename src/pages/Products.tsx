@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Play, MessageSquare, Zap } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 
 const Products: React.FC = () => {
@@ -17,8 +16,8 @@ const Products: React.FC = () => {
         'Real-time insights',
         'Team benchmarking'
       ],
-      icon: Users,
-      color: 'rebuttl-purple'
+      icon: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/discovery-and-assess.svg',
+      color: 'purple'
     },
     {
       id: 'insights',
@@ -32,8 +31,8 @@ const Products: React.FC = () => {
         'Progress tracking',
         'ROI measurement'
       ],
-      icon: Play,
-      color: 'rebuttl-blue'
+      icon: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/report-and-insights.svg',
+      color: 'blue'
     },
     {
       id: 'grow',
@@ -47,8 +46,8 @@ const Products: React.FC = () => {
         'Progress milestones',
         'Multi-format content'
       ],
-      icon: MessageSquare,
-      color: 'rebuttl-orange'
+      icon: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/learn-.svg',
+      color: 'orange'
     },
     {
       id: 'flow',
@@ -62,8 +61,8 @@ const Products: React.FC = () => {
         'Conflict resolution',
         'Team dynamics'
       ],
-      icon: Zap,
-      color: 'rebuttl-orange'
+      icon: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/nudges-activate.svg',
+      color: 'green'
     }
   ];
 
@@ -133,16 +132,60 @@ const Products: React.FC = () => {
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {products.map((product) => {
-              const IconComponent = product.icon;
+              const getGradientClass = (color: string) => {
+                switch (color) {
+                  case 'purple': return 'bg-gradient-to-br from-purple-100 to-purple-200';
+                  case 'blue': return 'bg-gradient-to-br from-blue-100 to-blue-200';
+                  case 'orange': return 'bg-gradient-to-br from-orange-100 to-orange-200';
+                  case 'green': return 'bg-gradient-to-br from-green-100 to-green-200';
+                  default: return 'bg-gradient-to-br from-gray-100 to-gray-200';
+                }
+              };
+
+              const getTextColor = (color: string) => {
+                switch (color) {
+                  case 'purple': return 'text-purple-600';
+                  case 'blue': return 'text-blue-600';
+                  case 'orange': return 'text-orange-600';
+                  case 'green': return 'text-green-600';
+                  default: return 'text-gray-600';
+                }
+              };
+
+              const getDotColor = (color: string) => {
+                switch (color) {
+                  case 'purple': return 'bg-purple-500';
+                  case 'blue': return 'bg-blue-500';
+                  case 'orange': return 'bg-orange-500';
+                  case 'green': return 'bg-green-500';
+                  default: return 'bg-gray-500';
+                }
+              };
+
+              const getCategoryColor = (color: string) => {
+                switch (color) {
+                  case 'purple': return 'text-purple-600';
+                  case 'blue': return 'text-blue-600';
+                  case 'orange': return 'text-orange-600';
+                  case 'green': return 'text-green-600';
+                  default: return 'text-gray-600';
+                }
+              };
+
               return (
-                <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border-gray-200 relative overflow-hidden">
-                  <CardContent className="p-8">
+                <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border-gray-200 relative overflow-hidden bg-white">
+                  <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
-                      <div className={`bg-${product.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-${product.color}/20 transition-all duration-300 flex-shrink-0`}>
-                        <IconComponent className={`w-8 h-8 text-${product.color}`} />
+                      <div className="bg-gray-100 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                        <img 
+                          src={product.icon} 
+                          alt={`${product.name} icon`}
+                          className="w-10 h-10"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm font-medium text-gray-500 mb-2">{product.category}</div>
+                        <div className={`text-sm font-medium ${getCategoryColor(product.color)} mb-2`}>{product.category}</div>
                         <h3 className="text-2xl font-semibold mb-2">{product.name}</h3>
                         <div className="text-sm font-medium text-gray-700 mb-4 italic">
                           Focus: {product.focus}
@@ -154,7 +197,7 @@ const Products: React.FC = () => {
                           <ul className="space-y-1">
                             {product.features.map((feature, index) => (
                               <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
-                                <span className={`w-1.5 h-1.5 rounded-full bg-${product.color}`}></span>
+                                <span className={`w-1.5 h-1.5 rounded-full ${getDotColor(product.color)}`}></span>
                                 {feature}
                               </li>
                             ))}
@@ -164,8 +207,8 @@ const Products: React.FC = () => {
                     </div>
                   </CardContent>
                   
-                  {/* Animated background effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r from-${product.color}/5 via-transparent to-${product.color}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  {/* Animated background effect - removed blur */}
+                  <div className={`absolute inset-0 bg-gradient-to-r from-${product.color}-50/30 via-transparent to-${product.color}-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                 </Card>
               );
             })}

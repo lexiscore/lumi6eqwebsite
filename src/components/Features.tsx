@@ -28,14 +28,16 @@ const Features: React.FC = () => {
                       <Users className="w-8 h-8 text-rebuttl-purple" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2">Discover</h3>
-                      <div className="text-sm font-medium text-rebuttl-purple mb-2">Assessment</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-xl font-semibold">Discover</h3>
+                        <div className="text-sm font-medium text-rebuttl-purple">Assessment</div>
+                      </div>
                       <p className="text-gray-600 text-sm">Assessments that reveal strengths and gaps with precision.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-rebuttl-purple/5 p-6 rounded-b-2xl group-hover:bg-rebuttl-purple/10 transition-all duration-300">
+                <div className="mt-auto bg-rebuttl-purple/5 p-4 rounded-b-2xl group-hover:bg-rebuttl-purple/10 transition-all duration-300">
                   <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
@@ -80,14 +82,16 @@ const Features: React.FC = () => {
                       <Play className="w-8 h-8 text-rebuttl-blue" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2">Insights</h3>
-                      <div className="text-sm font-medium text-rebuttl-blue mb-2">Reports & Deep Analysis</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-xl font-semibold">Insights</h3>
+                        <div className="text-sm font-medium text-rebuttl-blue">Reports & Deep Analysis</div>
+                      </div>
                       <p className="text-gray-600 text-sm">Reports that turn data into clear growth paths.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-rebuttl-blue/5 p-6 rounded-b-2xl group-hover:bg-rebuttl-blue/10 transition-all duration-300">
+                <div className="mt-auto bg-rebuttl-blue/5 p-4 rounded-b-2xl group-hover:bg-rebuttl-blue/10 transition-all duration-300">
                   <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center">
@@ -132,14 +136,16 @@ const Features: React.FC = () => {
                       <MessageSquare className="w-8 h-8 text-rebuttl-orange" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2">Grow</h3>
-                      <div className="text-sm font-medium text-rebuttl-orange mb-2">Learning Plan</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-xl font-semibold">Grow</h3>
+                        <div className="text-sm font-medium text-rebuttl-orange">Learning Plan</div>
+                      </div>
                       <p className="text-gray-600 text-sm">Personalized learning plans that build habits over time.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-rebuttl-orange/5 p-6 rounded-b-2xl group-hover:bg-rebuttl-orange/10 transition-all duration-300">
+                <div className="mt-auto bg-rebuttl-orange/5 p-4 rounded-b-2xl group-hover:bg-rebuttl-orange/10 transition-all duration-300">
                   <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center">
@@ -184,14 +190,16 @@ const Features: React.FC = () => {
                       <MessageSquare className="w-8 h-8 text-green-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-2">Flow</h3>
-                      <div className="text-sm font-medium text-green-600 mb-2">Workplace Nudges</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-xl font-semibold">Flow</h3>
+                        <div className="text-sm font-medium text-green-600">Workplace Nudges</div>
+                      </div>
                       <p className="text-gray-600 text-sm">Real-time nudges that reinforce EQ where work happens.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-green-50 p-6 rounded-b-2xl group-hover:bg-green-100 transition-all duration-300">
+                <div className="mt-auto bg-green-50 p-4 rounded-b-2xl group-hover:bg-green-100 transition-all duration-300">
                   <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
