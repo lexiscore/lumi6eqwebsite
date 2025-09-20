@@ -27,7 +27,25 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <Logo size="md" />
+          <div className="relative">
+            {/* Text Logo - shown when not scrolled */}
+            <div className={`transition-all duration-300 ease-in-out ${
+              isScrolled ? 'opacity-0 scale-95 absolute' : 'opacity-100 scale-100'
+            }`}>
+              <Logo size="md" />
+            </div>
+            
+            {/* SVG Logo - shown when scrolled */}
+            <div className={`transition-all duration-300 ease-in-out ${
+              isScrolled ? 'opacity-100 scale-100' : 'opacity-0 scale-95 absolute'
+            }`}>
+              <img 
+                src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/Logo+1.svg" 
+                alt="Lumi6" 
+                className="h-8 w-auto"
+              />
+            </div>
+          </div>
         </Link>
         
         <div className="hidden md:flex items-center gap-8">
