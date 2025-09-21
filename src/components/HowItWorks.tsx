@@ -37,16 +37,16 @@ const HowItWorks: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
           {steps.map((step, index) => (
             <div 
               key={step.number}
-              className="relative p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group"
+              className="relative p-4 md:p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group"
             >
-              <div className="absolute -top-5 -left-2 text-6xl font-bold text-rebuttl-blue/10 group-hover:text-rebuttl-blue/20 transition-colors duration-300">
+              <div className="absolute -top-3 -left-1 text-4xl md:text-6xl font-bold text-rebuttl-blue/10 group-hover:text-rebuttl-blue/20 transition-colors duration-300 leading-none">
                 {step.number}
               </div>
-              <h3 className="text-xl font-semibold mb-3 mt-6">{step.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 mt-4 md:mt-6">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
               
               {/* Connection line between steps */}
