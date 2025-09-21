@@ -43,10 +43,7 @@ const HowItWorks: React.FC = () => {
               key={step.number}
               className="relative p-4 md:p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group"
             >
-              <div className="absolute -top-3 -left-1 text-4xl md:text-6xl font-bold text-rebuttl-blue/10 group-hover:text-rebuttl-blue/20 transition-colors duration-300 leading-none">
-                {step.number}
-              </div>
-              <h3 className="text-xl font-semibold mb-3 mt-4 md:mt-6">{step.title}</h3>
+              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
               
               {/* Connection line between steps */}
@@ -95,13 +92,13 @@ const HowItWorks: React.FC = () => {
               <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> Future-ready leaders lead with EQ — influence, empathy, and resilience now matter more than strategy alone.</li>
             </ul>
           </div>
-          <div className="relative p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
+          <div className="relative p-4 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
             {/* EQ Domains Infographic */}
-            <div className="mx-auto w-full max-w-lg">
+            <div className="mx-auto w-full">
               <img 
                 src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/EI+domains.png" 
                 alt="Emotional Intelligence Domains - Self-Awareness, Self-Management, Social Awareness, and Relationship Management"
-                className="w-full h-auto rounded-xl shadow-md"
+                className="w-full h-auto rounded-xl shadow-md object-cover"
                 loading="lazy"
               />
             </div>

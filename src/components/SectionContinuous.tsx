@@ -15,12 +15,12 @@ const SectionContinuous: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Assess to Action Infographic */}
-          <div className="relative p-8 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
-            <div className="mx-auto w-full max-w-lg">
+          <div className="relative p-4 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
+            <div className="mx-auto w-full">
               <img 
                 src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/Assess+to+action.png" 
                 alt="From Assessments to Action - EQ Development Process"
-                className="w-full h-auto rounded-xl shadow-md"
+                className="w-full h-auto rounded-xl shadow-md object-cover"
                 loading="lazy"
               />
             </div>

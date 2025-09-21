@@ -23,7 +23,7 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-rebuttl-purple/30 hover:border-rebuttl-purple transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6">
                     <div className="bg-rebuttl-purple/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-rebuttl-purple/20 transition-all duration-300 flex-shrink-0">
                       <Users className="w-8 h-8 text-rebuttl-purple" />
                     </div>
@@ -37,8 +37,8 @@ const Features: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-rebuttl-purple/5 p-4 rounded-b-2xl group-hover:bg-rebuttl-purple/10 transition-all duration-300">
-                  <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
+                <div className="mt-auto bg-rebuttl-purple/5 p-2 rounded-b-2xl group-hover:bg-rebuttl-purple/10 transition-all duration-300">
+                  <div className="w-full aspect-[3/2] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
                       <div className="text-center text-gray-500">
@@ -53,7 +53,7 @@ const Features: React.FC = () => {
                       alt="Lumi6 Discover - Assessment"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
-                      className="absolute inset-0 w-full h-full object-contain"
+                      className="absolute inset-0 w-full h-full object-cover"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = 'none'
                       }}
@@ -63,7 +63,7 @@ const Features: React.FC = () => {
                     <div className="absolute top-2 right-2 bg-rebuttl-purple text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 transform translate-y-2 group-hover:translate-y-0">
                       Interactive
                     </div>
-                    <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm text-gray-700 text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute bottom-2 left-2 bg-rebuttl-purple/90 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
                       EQ Assessment
                     </div>
                   </div>
@@ -77,22 +77,22 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-rebuttl-blue/30 hover:border-rebuttl-blue transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6">
                     <div className="bg-rebuttl-blue/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-rebuttl-blue/20 transition-all duration-300 flex-shrink-0">
                       <Play className="w-8 h-8 text-rebuttl-blue" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <h3 className="text-xl font-semibold">Insights</h3>
-                        <div className="text-sm font-medium text-rebuttl-blue">Reports & Deep Analysis</div>
+                        <div className="text-sm font-medium text-rebuttl-blue">Reports & Analysis</div>
                       </div>
                       <p className="text-gray-600 text-sm">Reports that turn data into clear growth paths.</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-rebuttl-blue/5 p-4 rounded-b-2xl group-hover:bg-rebuttl-blue/10 transition-all duration-300">
-                  <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
+                <div className="mt-auto bg-rebuttl-blue/5 p-2 rounded-b-2xl group-hover:bg-rebuttl-blue/10 transition-all duration-300">
+                  <div className="w-full aspect-[3/2] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center">
                       <div className="text-center text-gray-500">
@@ -107,7 +107,7 @@ const Features: React.FC = () => {
                       alt="Lumi6 Insights - Reports & Analysis"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
-                      className="absolute inset-0 w-full h-full object-contain"
+                      className="absolute inset-0 w-full h-full object-cover"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = 'none'
                       }}
@@ -117,7 +117,7 @@ const Features: React.FC = () => {
                     <div className="absolute top-2 right-2 bg-rebuttl-blue text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 transform translate-y-2 group-hover:translate-y-0">
                       Analytics
                     </div>
-                    <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm text-gray-700 text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute bottom-2 left-2 bg-rebuttl-blue/90 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
                       EQ Report
                     </div>
                   </div>
@@ -131,7 +131,7 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-rebuttl-orange/30 hover:border-rebuttl-orange transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6">
                     <div className="bg-rebuttl-orange/10 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-rebuttl-orange/20 transition-all duration-300 flex-shrink-0">
                       <MessageSquare className="w-8 h-8 text-rebuttl-orange" />
                     </div>
@@ -145,8 +145,8 @@ const Features: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-rebuttl-orange/5 p-4 rounded-b-2xl group-hover:bg-rebuttl-orange/10 transition-all duration-300">
-                  <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
+                <div className="mt-auto bg-rebuttl-orange/5 p-2 rounded-b-2xl group-hover:bg-rebuttl-orange/10 transition-all duration-300">
+                  <div className="w-full aspect-[3/2] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center">
                       <div className="text-center text-gray-500">
@@ -161,7 +161,7 @@ const Features: React.FC = () => {
                       alt="Lumi6 Grow - Learning Plan"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
-                      className="absolute inset-0 w-full h-full object-contain"
+                      className="absolute inset-0 w-full h-full object-cover"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = 'none'
                       }}
@@ -171,7 +171,7 @@ const Features: React.FC = () => {
                     <div className="absolute top-2 right-2 bg-rebuttl-orange text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 transform translate-y-2 group-hover:translate-y-0">
                       Learning
                     </div>
-                    <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm text-gray-700 text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute bottom-2 left-2 bg-rebuttl-orange/90 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
                       Development
                     </div>
                   </div>
@@ -185,7 +185,7 @@ const Features: React.FC = () => {
             <Card className="feature-card bg-gradient-to-b from-white to-gray-50 border-green-300 hover:border-green-400 transition-all duration-300 h-full">
               <CardContent className="p-0 h-full flex flex-col">
                 <div className="p-6">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6">
                     <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-green-200 transition-all duration-300 flex-shrink-0">
                       <MessageSquare className="w-8 h-8 text-green-600" />
                     </div>
@@ -199,8 +199,8 @@ const Features: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mt-auto bg-green-50 p-4 rounded-b-2xl group-hover:bg-green-100 transition-all duration-300">
-                  <div className="w-full aspect-[4/3] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
+                <div className="mt-auto bg-green-50 p-2 rounded-b-2xl group-hover:bg-green-100 transition-all duration-300">
+                  <div className="w-full aspect-[3/2] mx-auto bg-white relative overflow-hidden rounded-lg shadow-lg">
                     {/* Fallback placeholder (shows if image fails) */}
                     <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
                       <div className="text-center text-gray-500">
@@ -215,7 +215,7 @@ const Features: React.FC = () => {
                       alt="Lumi6 Flow - Workplace Nudges"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
-                      className="absolute inset-0 w-full h-full object-contain"
+                      className="absolute inset-0 w-full h-full object-cover"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = 'none'
                       }}
@@ -225,7 +225,7 @@ const Features: React.FC = () => {
                     <div className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 transform translate-y-2 group-hover:translate-y-0">
                       Smart
                     </div>
-                    <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm text-gray-700 text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="absolute bottom-2 left-2 bg-green-600/90 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 delay-300 transform translate-y-2 group-hover:translate-y-0">
                       Nudges
                     </div>
                   </div>
