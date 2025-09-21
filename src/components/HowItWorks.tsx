@@ -2,6 +2,7 @@
 import React from 'react';
 
 const HowItWorks: React.FC = () => {
+
   const steps = [
     {
       number: '01',
@@ -76,6 +77,7 @@ const HowItWorks: React.FC = () => {
                 <span>AI automates tasks — EQ is the human edge</span>
               </div>
             </div>
+            
           </div>
         </div>
 
@@ -92,16 +94,17 @@ const HowItWorks: React.FC = () => {
               <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> Future-ready leaders lead with EQ — influence, empathy, and resilience now matter more than strategy alone.</li>
             </ul>
           </div>
-          <div className="relative p-4 bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-2xl border border-gray-100 shadow-lg">
+          <div className="relative">
             {/* EQ Domains Infographic */}
             <div className="mx-auto w-full">
               <img 
                 src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/EI+domains.png" 
                 alt="Emotional Intelligence Domains - Self-Awareness, Self-Management, Social Awareness, and Relationship Management"
-                className="w-full h-auto rounded-xl shadow-md object-cover"
+                className="w-full h-auto rounded-xl object-cover"
                 loading="lazy"
               />
             </div>
+            
           </div>
         </section>
       </div>
