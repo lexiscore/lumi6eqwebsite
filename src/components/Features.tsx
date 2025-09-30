@@ -1,10 +1,10 @@
 
-import React, { memo } from 'react';
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Play, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Features: React.FC = memo(() => {
+const Features: React.FC = () => {
   return (
     <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-rebuttl-lightBg to-white">
       <div className="container mx-auto px-4">
@@ -241,9 +241,7 @@ const Features: React.FC = memo(() => {
       </div>
     </section>
   );
-});
-
-Features.displayName = 'Features';
+};
 
 export default Features;
 

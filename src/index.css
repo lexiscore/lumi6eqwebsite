@@ -70,10 +70,10 @@
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
   
-  /* Optimized Font Loading - Using system fonts as fallback for better performance */
+  /* SF Pro Font */
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display'), local('SF Pro'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -81,7 +81,7 @@
   
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display Medium'), local('SF Pro'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -89,7 +89,7 @@
   
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display Semibold'), local('SF Pro'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -97,7 +97,7 @@
   
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display Bold'), local('SF Pro'), local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI'), local('Roboto'), local('Helvetica Neue'), local('Arial'), local('sans-serif');
+    src: url('https://fonts.cdnfonts.com/css/sf-pro-display');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -182,19 +182,26 @@
   }
 }
 
-/* Optimized Animations - Reduced complexity for better performance */
-@keyframes fade-in-simple {
+/* Custom Animations */
+@keyframes drop-bounce {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(-32px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(4px) scale(1.05);
+  }
+  70% {
+    transform: translateY(-2px) scale(0.98);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-.animate-fade-in-simple {
-  animation: fade-in-simple 0.4s ease-out;
+.animate-drop-bounce {
+  animation: drop-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
