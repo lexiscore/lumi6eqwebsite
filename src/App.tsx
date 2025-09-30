@@ -3,11 +3,20 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import React, { useEffect } from "react";
-import Index from "./pages/Index";
-import Products from "./pages/Products";
-import Blogs from "./pages/Blogs";
-import NotFound from "./pages/NotFound";
+import React, { useEffect, Suspense, lazy } from "react";
+
+// Lazy load pages for better performance
+const Index = lazy(() => import("./pages/Index"));
+const Products = lazy(() => import("./pages/Products"));
+const Blogs = lazy(() => import("./pages/Blogs"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-rebuttl-lightBg">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rebuttl-primary"></div>
+  </div>
+);
 
 // Marketing-only app: remove data fetching/auth providers
 
@@ -58,12 +67,14 @@ const App = () => {
       <Sonner position="bottom-center" closeButton={true} />
         <BrowserRouter>
           <ScrollToHash />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
     </TooltipProvider>
   );

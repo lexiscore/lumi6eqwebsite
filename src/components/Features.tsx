@@ -49,7 +49,7 @@ const Features: React.FC = () => {
                     </div>
                     {/* Provided image */}
                     <img
-                      src="/images/lumi6-discover.png"
+                      src="/images/optimized/lumi6-discover.webp"
                       alt="Lumi6 Discover - Assessment"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
@@ -103,7 +103,7 @@ const Features: React.FC = () => {
                     </div>
                     {/* Provided image */}
                     <img
-                      src="/images/lumi6-insights.png"
+                      src="/images/optimized/lumi6-insights.webp"
                       alt="Lumi6 Insights - Reports & Analysis"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
@@ -157,7 +157,7 @@ const Features: React.FC = () => {
                     </div>
                     {/* Provided image */}
                     <img
-                      src="/images/lumi6-grow.png"
+                      src="/images/optimized/lumi6-grow.webp"
                       alt="Lumi6 Grow - Learning Plan"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"
@@ -211,7 +211,7 @@ const Features: React.FC = () => {
                     </div>
                     {/* Provided image */}
                     <img
-                      src="/images/lumi6-flow.png"
+                      src="/images/optimized/lumi6-flow.webp"
                       alt="Lumi6 Flow - Workplace Nudges"
                       loading="lazy"
                       sizes="(min-width:1024px) 25vw, (min-width:768px) 50vw, 100vw"

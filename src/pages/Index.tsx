@@ -1,14 +1,22 @@
 
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
-import HowItWorks from '@/components/HowItWorks';
-import CTA from '@/components/CTA';
-import Footer from '@/components/Footer';
-import SectionContinuous from '@/components/SectionContinuous';
-import SectionInsights from '@/components/SectionInsights';
-import SectionProof from '@/components/SectionProof';
+import LazyImage from '@/components/LazyImage';
+
+// Lazy load non-critical components
+const Features = lazy(() => import('@/components/Features'));
+const HowItWorks = lazy(() => import('@/components/HowItWorks'));
+const SectionContinuous = lazy(() => import('@/components/SectionContinuous'));
+const SectionInsights = lazy(() => import('@/components/SectionInsights'));
+const SectionProof = lazy(() => import('@/components/SectionProof'));
+const CTA = lazy(() => import('@/components/CTA'));
+const Footer = lazy(() => import('@/components/Footer'));
+
+// Loading component for Suspense fallback
+const SectionLoader = () => (
+  <div className="w-full h-32 bg-gray-100 animate-pulse rounded-lg"></div>
+);
 
 const Index: React.FC = () => {
   return (
@@ -16,14 +24,28 @@ const Index: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        <Features />
-        <HowItWorks />
-        <SectionContinuous />
-        <SectionInsights />
-        <SectionProof />
-        <CTA />
+        <Suspense fallback={<SectionLoader />}>
+          <Features />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <HowItWorks />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <SectionContinuous />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <SectionInsights />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <SectionProof />
+        </Suspense>
+        <Suspense fallback={<SectionLoader />}>
+          <CTA />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
