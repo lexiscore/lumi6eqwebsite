@@ -106,67 +106,21 @@ export default {
 						height: '0'
 					}
 				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' }
-				},
-				'pulse-soft': {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.8' }
-				},
-				'slide-up': {
-					'0%': { transform: 'translateY(20px)', opacity: '0' },
-					'100%': { transform: 'translateY(0)', opacity: '1' }
-				},
+				// Simplified animations for better performance
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
 				},
-				'color-shift': {
-					'0%': { color: '#F97316' },  
-					'50%': { color: '#E94560' }, 
-					'100%': { color: '#F97316' }
-				},
-				'gradient-shift': {
-					'0%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' }
-				},
-				'glow-pulse': {
-					'0%, 100%': { 
-						boxShadow: '0 0 5px rgba(99, 102, 241, 0.5)',
-						opacity: '0.8'
-					},
-					'50%': { 
-						boxShadow: '0 0 20px rgba(99, 102, 241, 0.8)',
-						opacity: '1'
-					}
-				},
-				'color-pulse': {
-					'0%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' }
-				},
-				'scale-in': {
-					'0%': { transform: 'scale(0.92)', opacity: '0' },
-					'100%': { transform: 'scale(1)', opacity: '1' }
+				'slide-up': {
+					'0%': { transform: 'translateY(10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
-				'slide-up': 'slide-up 0.5s ease-out forwards',
-				'slide-up-delay-1': 'slide-up 0.5s ease-out 0.1s forwards',
-				'slide-up-delay-2': 'slide-up 0.5s ease-out 0.2s forwards',
-				'slide-up-delay-3': 'slide-up 0.5s ease-out 0.3s forwards',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'color-shift': 'color-shift 3s ease-in-out infinite',
-				'gradient-shift': 'gradient-shift 6s ease-in-out infinite',
-				'glow-pulse': 'glow-pulse 3s infinite',
-				'color-pulse': 'color-pulse 3s ease-in-out infinite',
-				'scale-in': 'scale-in 0.7s ease-out forwards',
+				'fade-in': 'fade-in 0.4s ease-out',
+				'slide-up': 'slide-up 0.4s ease-out forwards',
 			}
 		}
 	},

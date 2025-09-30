@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { memo } from 'react';
 
-const HowItWorks: React.FC = () => {
+const HowItWorks: React.FC = memo(() => {
 
   const steps = [
     {
@@ -110,6 +110,8 @@ const HowItWorks: React.FC = () => {
       </div>
     </section>
   );
-};
+});
+
+HowItWorks.displayName = 'HowItWorks';
 
 export default HowItWorks;
