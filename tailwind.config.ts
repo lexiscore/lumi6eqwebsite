@@ -166,7 +166,10 @@ export default {
 				'gradient-shift': 'gradient-shift 6s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 3s infinite',
 				'color-pulse': 'color-pulse 3s ease-in-out infinite',
-				'scale-in': 'scale-in 0.7s ease-out forwards',
+				'scale-in': 'scale-in 0.3s ease-out forwards',
+				// Instant loading animations - no delays, faster execution
+				'slide-up-instant': 'slide-up 0.3s ease-out forwards',
+				'scale-in-instant': 'scale-in 0.2s ease-out forwards',
 			}
 		}
 	},

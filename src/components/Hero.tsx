@@ -1,28 +1,30 @@
 
-import React from 'react';
+import React, { memo, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Logo from '@/components/ui/logo';
 
-const Hero: React.FC = () => {
-  const handleScrollToFeatures = () => {
+const Hero: React.FC = memo(() => {
+  const handleScrollToFeatures = useCallback(() => {
     document.getElementById('features')?.scrollIntoView({
       behavior: 'smooth'
     });
-  };
-  const handleScrollToExplainer = () => {
+  }, []);
+  
+  const handleScrollToExplainer = useCallback(() => {
     document.getElementById('explainer')?.scrollIntoView({
       behavior: 'smooth'
     });
-  };
+  }, []);
   
-  return <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+  return (
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
-          <Logo size="lg" className="mb-8 animate-scale-in" />
+          <Logo size="lg" className="mb-8 animate-scale-in-instant" />
           
           <div className="relative">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-orange bg-clip-text text-transparent max-w-4xl animate-slide-up">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-orange bg-clip-text text-transparent max-w-4xl">
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-rebuttl-purple to-rebuttl-blue animate-color-pulse bg-clip-text text-transparent">Future of work runs on </span>
                 <span className="bg-gradient-to-r from-rebuttl-orange to-rebuttl-red animate-color-pulse bg-clip-text text-transparent">Emotional Intelligence</span>
@@ -40,11 +42,11 @@ const Hero: React.FC = () => {
             </h1>
           </div>
           
-          <p className="mt-8 text-xl md:text-2xl text-gray-600 max-w-3xl animate-slide-up-delay-1">
+          <p className="mt-8 text-xl md:text-2xl text-gray-600 max-w-3xl">
             Lumi6 helps teams turn emotional intelligence into a superpower because the best workplaces run on empathy, not just algorithms
           </p>
           
-          <div className="mt-10 flex flex-col md:flex-row gap-4 animate-slide-up-delay-2">
+          <div className="mt-10 flex flex-col md:flex-row gap-4">
             <Button 
               className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white h-12 px-8 text-lg relative overflow-hidden group"
               onClick={handleScrollToFeatures}
@@ -61,7 +63,7 @@ const Hero: React.FC = () => {
             </Button>
           </div>
           
-          <button onClick={handleScrollToFeatures} className="mt-20 animate-float opacity-0 animate-slide-up-delay-3 group" aria-label="Scroll to features">
+          <button onClick={handleScrollToFeatures} className="mt-20 animate-float group" aria-label="Scroll to features">
             <ArrowDown className="w-10 h-10 text-rebuttl-blue group-hover:text-rebuttl-purple transition-colors duration-300" />
           </button>
         </div>
@@ -74,7 +76,10 @@ const Hero: React.FC = () => {
       
       {/* Futuristic grid lines */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDYwaDYwVjBoLTYweiIvPjxwYXRoIGQ9Ik0zNiAzNmgyNHYtMTJIMzZ2MTJ6TTAgMzZoMjR2LTEySDB2MTJ6IiBmaWxsPSIjZWFlYWVhIiBmaWxsLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-10 -z-10"></div>
-    </section>;
-};
+    </section>
+  );
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;
