@@ -7,10 +7,6 @@
   NODE_VERSION = "20"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
